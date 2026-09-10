@@ -13,7 +13,7 @@ PROFILE = {
     "bio": "Pythonとゲームと記録。",
 }
 
-CURRENT_ACTIVITIES = ["Pythonの勉強", "小さなゲーム制作", "学習の記録"]
+CURRENT_ACTIVITIES = ["AtCoder, Pythonの勉強", "小さなゲーム・システム制作", "学習の記録"]
 
 PROJECTS = [
     {
@@ -40,11 +40,6 @@ PROJECTS = [
         ],
         "url": "https://github.com/zrPointc/newgame0901",
     },
-]
-
-MEMO_LINES = [
-    "わかったつもりでも、書くと止まる。",
-    "その途中も、残しておきたい。",
 ]
 
 # 自分のプロフィールのURLを入れてください。空欄は「準備中」と表示します。
