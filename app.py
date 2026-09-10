@@ -1,8 +1,9 @@
 """Python / Flask でホームページを表示する、小さなアプリ。"""
 
 from flask import Flask, abort, render_template
-from content import PROFILE, CURRENT_ACTIVITIES, PROJECTS, SOCIAL_LINKS
+from content import PROFILE, CURRENT_ACTIVITIES, SOCIAL_LINKS
 from posts import load_posts
+from projects import load_projects
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ def home():
         "index.html",
         profile=PROFILE,
         activities=CURRENT_ACTIVITIES,
-        projects=PROJECTS,
+        projects=load_projects(),
         social_links=SOCIAL_LINKS,
         latest_posts=load_posts()[:3],
     )
