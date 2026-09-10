@@ -5,7 +5,7 @@
 赤黒の色づかいと、手描きの線・貼り紙・小さなメモを合わせた個人ブログです。
 PythonのFlaskで動きます。スマートフォンではプロフィールと本文が縦に並びます。
 
-`main` ブランチへ保存すると、GitHub ActionsがMarkdown日記をHTMLへ変換し、GitHub Pagesへ公開します。
+`main` ブランチへ保存すると、GitHub ActionsがMarkdown日記をHTMLへ変換し、GitHub Pagesへ公開します。\n日記を追加したときも、同じURLへ自動で反映されます。
 
 ## Windowsで動かす
 
