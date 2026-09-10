@@ -3,8 +3,8 @@ title: Python Code Trainer
 description: コードの理解を確かめる学習アプリ。
 status: つくっているもの
 kind: code
-url: https://github.com/zrPointc/Python-Code-Trainer
-link_text: GitHubでコードを見る
+url: 
+link_text: 
 order: 1
 ---
 
