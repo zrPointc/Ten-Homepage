@@ -5,7 +5,8 @@
 赤黒の色づかいと、手描きの線・貼り紙・小さなメモを合わせた個人ブログです。
 PythonのFlaskで動きます。スマートフォンではプロフィールと本文が縦に並びます。
 
-`main` ブランチへ保存すると、GitHub ActionsがMarkdown日記をHTMLへ変換し、GitHub Pagesへ公開します。\n日記を追加したときも、同じURLへ自動で反映されます。
+`main` ブランチへ保存すると、GitHub ActionsがMarkdown日記をHTMLへ変換し、GitHub Pagesへ公開します。
+日記を追加したときも、同じURLへ自動で反映されます。
 
 ## Windowsで動かす
 
@@ -24,8 +25,9 @@ python -m venv .venv
 
 | ファイル | 変えられるもの |
 |---|---|
-| `content.py` | 名前、自己紹介、制作中のもの、メモ、SNSリンク |
+| `content.py` | 名前、自己紹介、現在の活動、SNSリンク |
 | `posts/*.md` | 日記の記事 |
+| `projects/*.md` | 作品・制作中のもの |
 | `static/style.css` | 色、余白、文字の大きさ、手描き風の装飾 |
 | `templates/index.html` | 画面の構造 |
 | `static/images/profile.png` | プロフィールのイラスト |
@@ -42,6 +44,13 @@ X・YouTube・TikTokは `fksts10`、GitHubは `zrPointc` を設定していま�
 `posts/_template.md` をコピーし、`2026-09-10-title.md` のような名前に変えます。
 先頭の `title`・`date`・`summary`・`tags` と、その下の本文を書き換えてください。
 ファイル名のうち `.md` より前の部分が記事のURLになります。
+
+## 作品を追加する
+
+`projects/_template.md` をコピーし、`my-app.md` のような名前に変えます。
+先頭の `title`・`description`・`status`・`kind`・`url`・`link_text` と、その下の説明文を書き換えてください。
+`order` の数字が小さい作品ほど上に表示されます。`kind` は `code`・`game`・`other` から選べます。
+ファイル名が `_` で始まるテンプレートはサイトに表示されません。
 
 ## 公開版のしくみ
 
