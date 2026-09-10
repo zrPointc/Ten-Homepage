@@ -1,6 +1,6 @@
 // 現在見ているところを、左のメニューに小さく表示します。
 const navigationLinks = [...document.querySelectorAll('.site-nav a')];
-const watchedSections = ['top', 'diary', 'works', 'memo', 'links']
+const watchedSections = ['top', 'diary', 'works', 'links']
   .map((id) => document.getElementById(id));
 let scheduled = false;
 function updateNavigation() {

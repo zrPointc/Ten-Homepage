@@ -38,7 +38,6 @@
           <a href="#top" class="active" aria-current="location"><span aria-hidden="true">→</span> トップ</a>
           <a href="#diary"><span aria-hidden="true">→</span> 最近の日記</a>
           <a href="#works"><span aria-hidden="true">→</span> つくったもの</a>
-          <a href="#memo"><span aria-hidden="true">→</span> メモ</a>
           <a href="#links"><span aria-hidden="true">→</span> リンク</a>
         </nav>
         <div class="favorites">
@@ -94,12 +93,6 @@
             </details>
             {% endfor %}
           </div>
-        </section>
-
-        <section class="memo" id="memo" aria-labelledby="memo-title">
-          <h2 id="memo-title" class="hand"><span class="pencil-underline">ひとことメモ</span></h2>
-          <p class="memo-body">{% for line in memo_lines %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
-          <p class="memo-update hand">ホームページをつくりはじめました。</p>
         </section>
 
         <footer class="links-section" id="links" aria-label="SNSリンク">
