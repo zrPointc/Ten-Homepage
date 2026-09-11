@@ -1,16 +1,13 @@
-"""Python / Flask でホームページを表示する、小さなアプリ。"""
-
-from flask import Flask, abort, render_template
+from flask import Flask, render_template
 from content import PROFILE, CURRENT_ACTIVITIES, SOCIAL_LINKS
 from posts import load_posts
 from projects import load_projects
 
 app = Flask(__name__)
 
-
 @app.get("/")
 def home():
-    # Pythonの辞書・リストを、画面のテンプレートに渡しています。
+    # Pythonの辞書・リストを、画面のテンプレート(HTML？)に渡している。
     return render_template(
         "index.html",
         profile=PROFILE,
@@ -21,18 +18,5 @@ def home():
     )
 
 
-@app.get("/diary/")
-def diary():
-    return render_template("diary.html", profile=PROFILE, posts=load_posts(), social_links=SOCIAL_LINKS)
-
-
-@app.get("/diary/<slug>/")
-def diary_post(slug: str):
-    post = next((item for item in load_posts() if item["slug"] == slug), None)
-    if post is None:
-        abort(404)
-    return render_template("post.html", profile=PROFILE, post=post, social_links=SOCIAL_LINKS)
-
-
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000)
+    app.run()

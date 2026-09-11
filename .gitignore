@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
+
+# Local notes and drafts; do not upload these to GitHub.
+local-files/
