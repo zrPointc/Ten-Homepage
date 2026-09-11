@@ -43,7 +43,7 @@ def markdown_to_html(markdown: str) -> str:
 
     for raw_line in markdown.splitlines():
         line = raw_line.rstrip()
-        if line.startswith("```"):
+        if line.lstrip().startswith("```"):
             flush_paragraph()
             close_list()
             if in_code:
