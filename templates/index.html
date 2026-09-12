@@ -25,11 +25,6 @@
     <div class="page-layout">
       <aside class="sidebar" aria-label="プロフィールとメニュー">
         <div class="profile-top">
-          <figure class="portrait paper">
-            <span class="tape" aria-hidden="true"></span>
-            <img src="{{ url_for('static', filename='images/icon.jpeg') }}" alt="赤いパーカーを着て、パソコンに向かう小さなキャラクター" width="1254" height="1254" fetchpriority="high">
-            <figcaption class="hand">のんびり、つくっています。</figcaption>
-          </figure>
           <div class="profile-copy">
             <h1 class="profile-name hand">{{ profile.name }} <span>・ {{ profile.reading }}</span></h1>
             <p>{{ profile.bio }}</p>
@@ -55,8 +50,15 @@
 
       <main id="main">
         <section class="welcome" aria-labelledby="welcome-title">
-          <h2 id="welcome-title" class="hand">{{ profile.greeting }}</h2>
-          <p>{% for line in profile.intro %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+          <div class="welcome-copy">
+            <h2 id="welcome-title" class="hand">{{ profile.greeting }}</h2>
+            <p>{% for line in profile.intro %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}</p>
+          </div>
+          <figure class="portrait welcome-portrait paper">
+            <span class="tape" aria-hidden="true"></span>
+            <img src="{{ url_for('static', filename='images/icon.jpeg') }}" alt="赤いパーカーを着て、パソコンに向かう小さなキャラクター" width="1254" height="1254" fetchpriority="high">
+            <figcaption class="hand">のんびり、つくっています。</figcaption>
+          </figure>
         </section>
 
         <section class="home-diary" id="diary" aria-labelledby="diary-title">
