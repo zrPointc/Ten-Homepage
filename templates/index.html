@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <script src="{{ url_for('static', filename='site.js') }}" defer></script>
 </head>
-<body>
+<body class="has-jump-nav">
   <a class="skip-link" href="#main">本文へ</a>
   <div class="site-wrap" id="top">
     {% include '_header.html' %}
@@ -73,7 +73,7 @@
         </section>
 
         <section class="works" id="works" aria-labelledby="works-title">
-          <div class="section-heading"><h2 id="works-title" class="hand"><span class="pencil-underline">つくっているもの</span></h2><p class="hand">つくるって、たのしい。</p></div>
+          <div class="section-heading"><h2 id="works-title" class="hand"><span class="pencil-underline">つくったもの</span></h2><p class="hand">つくるって、たのしい。</p></div>
           <div class="project-list">
             {% for project in projects %}
             <details class="project" id="project-{{ project.id }}">
