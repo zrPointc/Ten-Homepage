@@ -13,7 +13,7 @@ PROFILE = {
     "bio": "Pythonとゲームと記録。",
 }
 
-CURRENT_ACTIVITIES = ["AtCoder, Pythonの勉強", "小さなゲーム・システム制作", "学習の記録"]
+CURRENT_ACTIVITIES = ["AtCoder, Pythonの勉強", "小さなゲーム・システム制作", "学習の記録・発信"]
 
 # 自分のプロフィールのURLを入れてください。空欄は「準備中」と表示します。
 SOCIAL_LINKS = [
