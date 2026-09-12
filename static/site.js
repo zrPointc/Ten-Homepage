@@ -1,5 +1,6 @@
 // 現在見ているところを、左のメニューに小さく表示します。
-const pageLoadItems = document.querySelectorAll('.masthead, .sidebar, main > section, main > footer, .bottom-line');
+// sidebar は sticky / fixed レイアウトを壊さないよう、登場アニメーション対象から外します。
+const pageLoadItems = document.querySelectorAll('.masthead, main > section, main > footer, .bottom-line');
 pageLoadItems.forEach((item, index) => {
   item.classList.add('page-load-item');
   item.style.setProperty('--load-delay', `${index * 120}ms`);
