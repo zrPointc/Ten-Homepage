@@ -4,13 +4,13 @@ PROFILE = {
     "name": "点",
     "reading": "てん",
     "title": "点のホームページ",
-    "description": "Pythonを勉強したり、ゲームをつくったり。点の小さなホームページ。",
+    "description": "AtCoderとPythonを勉強したり、ゲームやシステムをつくったり。点の小さなホームページ。",
     "greeting": "こんにちは！点です",
     "intro": [
-        "Pythonを勉強したり、ゲームをつくったり。",
+        "AtCoderとPythonを勉強したり、ゲームやシステムをつくったり。",
         "好きなものと、試したことを少しずつ置いていきます。",
     ],
-    "bio": "Pythonとゲームと記録。",
+    "bio": "PythonとAtCoderと記録。",
 }
 
 CURRENT_ACTIVITIES = ["AtCoder, Pythonの勉強", "小さなゲーム・システム制作", "学習の記録・発信"]
