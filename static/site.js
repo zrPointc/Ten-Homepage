@@ -1,4 +1,11 @@
 // 現在見ているところを、左のメニューに小さく表示します。
+const pageLoadItems = document.querySelectorAll('.masthead, .sidebar, main > section, main > footer, .bottom-line');
+pageLoadItems.forEach((item, index) => {
+  item.classList.add('page-load-item');
+  item.style.setProperty('--load-delay', `${index * 120}ms`);
+});
+requestAnimationFrame(() => document.body.classList.add('page-loaded'));
+
 const navigationLinks = [...document.querySelectorAll('.site-nav a')];
 const watchedSections = ['top', 'diary', 'works', 'links']
   .map((id) => document.getElementById(id));
