@@ -1,7 +1,7 @@
 /*
  * レイアウト挙動だけを分離した上書きCSS。
  * PCは Tongari-Homepage と同じく左カラムを100vhのsticky領域にする。
- * ジャンプナビは常に残し、画面の高さが足りないときはプロフィール側を縮める。
+ * ジャンプナビは常に残し、プロフィール画像は本文上部のwelcomeへ移す。
  * 760px以下ではサイドバーを通常フローへ戻し、ページ内メニューだけを画面上部に固定する。
  */
 
@@ -23,14 +23,12 @@
     overflow: hidden;
   }
 
-  /* プロフィールは必要に応じて縮む。 */
   .profile-top {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     min-height: 0;
-    overflow: hidden;
+    overflow: visible;
   }
 
-  /* ジャンプリンクは絶対に縮ませない。 */
   .site-nav {
     flex: 0 0 auto;
   }
@@ -39,6 +37,26 @@
     flex: 0 1 auto;
     min-height: 0;
     overflow: hidden;
+  }
+
+  /* welcomeは自己紹介文＋アイコンの2カラム。 */
+  .welcome {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+    gap: 34px;
+    align-items: center;
+    padding-bottom: 34px;
+  }
+
+  .welcome-copy {
+    min-width: 0;
+  }
+
+  .welcome-portrait {
+    width: 100%;
+    max-width: 240px;
+    justify-self: end;
+    margin: 0;
   }
 }
 
@@ -51,11 +69,6 @@
   .sidebar {
     padding-top: 22px;
     padding-bottom: 18px;
-  }
-
-  .portrait {
-    width: min(100%, 180px);
-    margin: 0 auto 16px;
   }
 
   .profile-name {
@@ -93,12 +106,6 @@
     padding-bottom: 12px;
   }
 
-  .portrait {
-    width: min(100%, 118px);
-    margin-bottom: 10px;
-  }
-
-  .portrait figcaption,
   .profile-copy p {
     display: none;
   }
@@ -147,6 +154,7 @@
   }
 
   .profile-top {
+    display: block;
     overflow: visible;
   }
 
@@ -188,6 +196,18 @@
     min-height: 44px;
     padding: 0 4px;
   }
+
+  .welcome {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .welcome-portrait {
+    width: min(68vw, 240px);
+    justify-self: center;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 470px) {
@@ -204,5 +224,9 @@
     gap: 6px;
     padding: 7px 10px;
     font-size: .9rem;
+  }
+
+  .welcome-portrait {
+    width: min(72vw, 210px);
   }
 }
