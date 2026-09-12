@@ -26,11 +26,11 @@
         <div class="profile-top">
           <figure class="portrait paper">
             <span class="tape" aria-hidden="true"></span>
-            <img src="{{ url_for('static', filename='images/profile.png') }}" alt="赤いパーカーを着て、パソコンに向かう小さなキャラクター" width="1254" height="1254" fetchpriority="high">
+            <img src="{{ url_for('static', filename='images/icon.jpeg') }}" alt="赤いパーカーを着て、パソコンに向かう小さなキャラクター" width="1254" height="1254" fetchpriority="high">
             <figcaption class="hand">のんびり、つくっています。</figcaption>
           </figure>
           <div class="profile-copy">
-            <h1 class="profile-name hand"><img src="{{ url_for('static', filename='images/icon.jpeg') }}" alt="">{{ profile.name }} <span>・ {{ profile.reading }}</span></h1>
+            <h1 class="profile-name hand">{{ profile.name }} <span>・ {{ profile.reading }}</span></h1>
             <p>{{ profile.bio }}</p>
           </div>
         </div>
