@@ -6,7 +6,7 @@ pageLoadItems.forEach((item, index) => {
 });
 requestAnimationFrame(() => document.body.classList.add('page-loaded'));
 
-const navigationLinks = [...document.querySelectorAll('.site-nav a')];
+const navigationLinks = [...document.querySelectorAll('.site-nav a, .mobile-jump-nav a')];
 const watchedSections = ['top', 'diary', 'now', 'works', 'links']
   .map((id) => document.getElementById(id));
 let scheduled = false;
