@@ -9,7 +9,7 @@
   <meta property="og:title" content="{{ profile.title }}">
   <meta property="og:description" content="{{ profile.description }}">
   <meta property="og:type" content="website">
-  <link rel="icon" href="{{ url_for('static', filename='images/icon.jpeg') }}" type="image/jpeg">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
             <figcaption class="hand">のんびり、つくっています。</figcaption>
           </figure>
           <div class="profile-copy">
-            <h1 class="profile-name hand">{{ profile.name }} <span>・ {{ profile.reading }}</span></h1>
+            <h1 class="profile-name hand"><img src="{{ url_for('static', filename='images/icon.jpeg') }}" alt="">{{ profile.name }} <span>・ {{ profile.reading }}</span></h1>
             <p>{{ profile.bio }}</p>
           </div>
         </div>
